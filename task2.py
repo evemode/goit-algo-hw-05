@@ -7,13 +7,16 @@ def generator_numbers(text: str):
     pattern = r'\d+\.\d+'
     numbers = re.findall(pattern, text) # searching digits using pattern
     for num in numbers:
-        yield float(num)
+        try:
+            yield float(num)
+        except ValueError: #checking values
+            continue
 
 def sum_profit(text: str, func: Callable):
     '''sum of all incomes'''
     result = 0
     for num in func(text):
-        result += num
+        result += num #summ all the income to result
     return result
 
 total_income = sum_profit(text, generator_numbers)
