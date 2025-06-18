@@ -14,7 +14,7 @@ def input_error(func):
 
     return inner
 
-
+@input_error
 def parse_input(user_input):
     '''parsing user's input'''
     cmd, *args = user_input.split() #separates command from users additional info -  name, number

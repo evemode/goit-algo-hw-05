@@ -5,7 +5,7 @@ text = "Загальний дохід працівника складаєтьс�
 
 def generator_numbers(text: str):
     '''finds all digits in the text and return them via generator'''
-    pattern = r'\d+\.\d+'
+    pattern = r' \d+\.\d+ '
     numbers = re.findall(pattern, text) # searching digits using pattern
     for num in numbers:
         try:
