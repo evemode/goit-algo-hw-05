@@ -9,7 +9,7 @@ def caching_fibonacci():
         elif n ==1:
             result = 1
         else:
-            return fibonacci(n-1) + fibonacci(n-2)
+            result = fibonacci(n-1) + fibonacci(n-2)
         cache[n] = result #save result to cache
         return result
     return fibonacci
